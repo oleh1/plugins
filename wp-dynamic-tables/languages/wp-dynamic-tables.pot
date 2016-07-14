@@ -1,0 +1,792 @@
+# Copyright (C) 2013 TODO
+# This file is distributed under the same license as the TODO package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Flexible Mega Menu 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/plugins/plugin-name\n"
+"POT-Creation-Date: 2015-06-02 17:12+0200\n"
+"PO-Revision-Date: 2015-06-02 17:12+0200\n"
+"Last-Translator: FULL NAME <email@example.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-wp-dynamic-tables-admin.php:89
+msgid "File format doesn't match with selected table type"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:90
+msgid "You have to save your setting before activating license"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:91
+msgid "License code is already activated"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:92
+#: admin/class-wp-dynamic-tables-admin.php:1506
+msgid "An error occured on license activation. Please try again."
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:93
+#: admin/class-wp-dynamic-tables-admin.php:1574
+msgid "An error occured on license deactivation. Please try again."
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:94
+msgid "Your license is not activated"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:109
+msgid "Table settings"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:110
+msgid "Table data"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:136
+msgid "copy"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:287
+#: admin/class-wp-dynamic-tables-admin.php:1819
+msgid "No results found"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:614
+msgid "Table type:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:616
+msgid "- Select table type -"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:617
+msgid "MySQL query"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:618
+msgid "MySQL query - Non WP MySQL Connection"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:619
+#: public/class-wp-dynamic-tables-public.php:131
+msgid "CSV"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:620
+msgid "EXCEL (.xls, .xlsx)"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:621
+msgid "ODS"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:622
+msgid "XML"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:626
+#: admin/class-wp-dynamic-tables-admin.php:657
+msgid "MySQL query:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:630
+#: admin/class-wp-dynamic-tables-admin.php:661
+msgid "Test query"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:637
+msgid "Database host:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:642
+msgid "Database name:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:647
+msgid "Database username:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:652
+msgid "Database pasword:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:669
+msgid "Upload file:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:673
+msgid "Upload file"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:692
+msgid "Automatic MySQL query data update"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:697
+msgid "Default entries per table:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:699
+msgid "5 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:700
+msgid "10 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:701
+msgid "15 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:702
+msgid "20 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:703
+msgid "25 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:704
+msgid "30 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:705
+msgid "40 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:706
+msgid "50 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:707
+msgid "100 entries"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:712
+msgid "Show table title"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:716
+msgid "Enable table tools to front-end"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:716
+msgid "( copy, save to Excel, save to PDF etc.)"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:720
+msgid "Enable search field"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:724
+msgid "Enable sorting"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:728
+msgid "Enable word wrap"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:732
+msgid "Enable chart"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:737
+msgid "Chart type:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:739
+msgid "Line"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:740
+msgid "Spline"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:741
+msgid "Area"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:742
+msgid "Pie"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:743
+msgid "Bar"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:744
+msgid "Scatter"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:745
+msgid "Area Spline"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:746
+msgid "Step"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:747
+msgid "Area step"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:752
+msgid "Chart position:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:754
+msgid "Above table"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:755
+msgid "Below table"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:761
+msgid "Enable responsive"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:765
+msgid "Enable lazy load"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:771
+msgid "Enable table data front-end edit"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:777
+msgid "Select roles:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:829
+#: admin/class-wp-dynamic-tables-admin.php:1741
+#: admin/class-wp-dynamic-tables-admin.php:1765
+#: admin/class-wp-dynamic-tables-admin.php:1782
+#: admin/class-wp-dynamic-tables-admin.php:1818
+#: admin/class-wp-dynamic-tables-admin.php:1843
+#: admin/class-wp-dynamic-tables-admin.php:1854
+msgid "No data inserted"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:873
+#: admin/class-wp-dynamic-tables-admin.php:1032 wp-dynamic-tables.php:290
+msgid "Column"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:922
+#: admin/class-wp-dynamic-tables-admin.php:1050
+msgid "Publish"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:926
+#: admin/class-wp-dynamic-tables-admin.php:1054
+msgid "Width:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:928
+#: admin/class-wp-dynamic-tables-admin.php:1056
+msgid "Auto"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:929
+#: admin/class-wp-dynamic-tables-admin.php:1057
+msgid "Custom"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:935
+#: admin/class-wp-dynamic-tables-admin.php:1063
+msgid "px"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:936
+#: admin/class-wp-dynamic-tables-admin.php:1064
+msgid "%"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:942
+#: admin/class-wp-dynamic-tables-admin.php:1071
+msgid "Column type:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:944
+#: admin/class-wp-dynamic-tables-admin.php:1073
+msgid "Text"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:945
+#: admin/class-wp-dynamic-tables-admin.php:1074
+msgid "Number"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:946
+#: admin/class-wp-dynamic-tables-admin.php:1075
+msgid "Currency amount"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:951
+#: admin/class-wp-dynamic-tables-admin.php:1081
+msgid "Number format:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:953
+#: admin/class-wp-dynamic-tables-admin.php:1083
+msgid "1000.00"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:954
+#: admin/class-wp-dynamic-tables-admin.php:1084
+msgid "1000,00"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:955
+#: admin/class-wp-dynamic-tables-admin.php:1085
+msgid "1,000.00"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:956
+#: admin/class-wp-dynamic-tables-admin.php:1086
+msgid "1.000,00"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:961
+#: admin/class-wp-dynamic-tables-admin.php:1091
+msgid "Symbol position:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:963
+#: admin/class-wp-dynamic-tables-admin.php:1093
+msgid "Before amount"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:964
+#: admin/class-wp-dynamic-tables-admin.php:1094
+msgid "After amount"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:969
+#: admin/class-wp-dynamic-tables-admin.php:1099
+msgid "Default sort:"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:971
+#: admin/class-wp-dynamic-tables-admin.php:1101
+msgid "Ascending"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:972
+#: admin/class-wp-dynamic-tables-admin.php:1102
+msgid "Descending"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:978
+#: admin/class-wp-dynamic-tables-admin.php:1107
+msgid "Enable in chart"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:982
+#: admin/class-wp-dynamic-tables-admin.php:1111
+msgid "Disable on tablets"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:986
+#: admin/class-wp-dynamic-tables-admin.php:1115
+msgid "Disable on mobiles"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:990
+#: admin/class-wp-dynamic-tables-admin.php:1119
+msgid "Exclude from search"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1144
+#: admin/class-wp-dynamic-tables-admin.php:1652
+msgid "Settings"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1151
+msgid "General"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1152
+msgid "Product license"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1204
+msgid "Dynamic Tables Settings"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1245
+msgid "Remove Dynamic Tables data on plugin uninstall"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1250
+msgid "Add Custom CSS"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1258
+#: admin/class-wp-dynamic-tables-admin.php:1337
+msgid "Save Settings"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1297
+#, php-format
+msgid ""
+"By verifying your product's license you qualified to enable auto updates of "
+"<b>WP Dynamic Tables</b> plugin. The license (purchase) code may only be "
+"used for one WordPress site at a time. If you have previously activated your "
+"license code on another site, then you should deactivate it first or obtain "
+"a %snew one%s ."
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1306
+msgid "Envato username"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1312
+msgid "Secret API key"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1321
+#: admin/class-wp-dynamic-tables-admin.php:1331
+msgid "Where to find it?"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1326
+msgid "Purchase code"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1339
+msgid "Activate license"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1340
+msgid "Deactivate license"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1416
+#: admin/class-wp-dynamic-tables-admin.php:1441
+msgid "Settings saved successful."
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1505
+msgid "License activated successful"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1573
+msgid "License deactivated successful"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1665
+msgid "ID"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1667
+msgid "type"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1668
+msgid "Shortcode"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1669
+msgid "Date created"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1680
+msgid "none"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1709
+#: public/class-wp-dynamic-tables-public.php:127
+msgid "Copy"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1739
+msgid "Not authorized action"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1763
+msgid "Database connection failed"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1780
+msgid "Database selection failed"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1814
+#: admin/class-wp-dynamic-tables-admin.php:1837
+msgid "Ok"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1841
+msgid "Query excecution failed"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1852
+msgid "Not authorized user"
+msgstr ""
+
+#: admin/class-wp-dynamic-tables-admin.php:1953
+msgid "Invalid mime type"
+msgstr ""
+
+#: includes/class-wp-dynamic-tables-update-plugin.php:131
+#, php-format
+msgid "%s Download new version from CodeCanyon %s or %s enable auto update."
+msgstr ""
+
+#: includes/class-wp-dynamic-tables-widget.php:12
+msgid "WP Dynamic Tables"
+msgstr ""
+
+#: includes/class-wp-dynamic-tables-widget.php:13
+msgid "Select and add a table in your sidebar."
+msgstr ""
+
+#: includes/class-wp-dynamic-tables-widget.php:62
+msgid "Select table:"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:101
+msgid " - click/return to sort ascending"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:102
+msgid " - click/return to sort descending"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:103
+msgid "First"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:104
+msgid "Last"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:105
+msgid "Next"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:106
+msgid "Previous"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:107
+msgid "No data available in table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:108
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:109
+#: public/class-wp-dynamic-tables-public.php:114
+msgid "No entries to show"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:110
+msgid " - filtering from _MAX_ records"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:111
+msgid "Loading..."
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:112
+msgid "Processing..."
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:113
+msgid "Search:"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:115
+msgid "Show"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:116
+msgid "entries"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:117
+msgid "All"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:118
+msgid "5"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:119
+msgid "10"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:120
+msgid "15"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:121
+msgid "20"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:122
+msgid "25"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:123
+msgid "30"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:124
+msgid "40"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:125
+msgid "50"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:126
+msgid "100"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:128
+msgid "Print"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:129
+msgid "PDF"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:130
+msgid "Excel"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:132
+msgid "Print view"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:133
+msgid ""
+"Please use your browser's print function to print this table. Press escape "
+"when finished."
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:134
+msgid "Table copied"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:135
+msgid "Copied [rows_num] to the clipboard."
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:136
+msgid "rows"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:137
+msgid "row"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:140
+msgid "Cancel"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:141
+msgid "Save"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:142
+msgid "Create"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:143
+msgid "Remove"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:153
+msgctxt "Post Type General Name"
+msgid "Dynamic Tables"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:154
+msgctxt "Post Type Singular Name"
+msgid "Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:155
+#: public/class-wp-dynamic-tables-public.php:156
+msgid "Dynamic Tables"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:157
+msgid "Parent Table:"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:158
+msgid "All Tables"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:159
+#: public/class-wp-dynamic-tables-public.php:160
+msgid "Add Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:161
+msgid "New Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:162
+msgid "Edit Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:163
+msgid "Update Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:164
+msgid "View Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:165
+msgid "Search Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:166
+msgid "Not found"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:167
+msgid "Not found in Trash"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:170
+msgid "Dynamic Table"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:171
+msgid "Table Description"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:391 wp-dynamic-tables.php:548
+#: wp-dynamic-tables.php:559
+msgid "Edit"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:391 wp-dynamic-tables.php:559
+msgid "+"
+msgstr ""
+
+#: public/class-wp-dynamic-tables-public.php:391 wp-dynamic-tables.php:559
+msgid "-"
+msgstr ""

@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Supsystic Table\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language: bg_BG\n"
+
+msgid "An error has occurred"
+msgstr "Възникна грешка"
+
+msgid "Overview"
+msgstr "Преглед"
+
+msgid "Add new table"
+msgstr "Добави нова таблица"
+
+msgid "Tables"
+msgstr "Таблици"
+
+msgid "License"
+msgstr "Лиценз"
+
+msgid "Invalid range specified."
+msgstr "Посочен е невалиден диапазон."
+
+msgid "Failed to find diagram %s."
+msgstr "Грешка при намирането на диаграма %s."
+
+msgid "Failed to find table %s."
+msgstr "Грешка при намирането на таблица %s."
+
+msgid "Add diagram"
+msgstr "Добави Диаграма"
+
+msgid "The table ID %s not found."
+msgstr "Таблица %s не беше намерена."
+
+msgid "Export"
+msgstr "Експорт"
+
+msgid "Export table"
+msgstr "Експорт на таблица"
+
+msgid "Select file type to export table:"
+msgstr "Изберете типа на файла за експорт на таблицата:"
+
+msgid "Import error"
+msgstr "Грешка при импортиране"
+
+msgid "Failed to import selected file"
+msgstr "Не може да се импортира избрания файл"
+
+msgid "Import to the table"
+msgstr "Импортиране в таблицата"
+
+msgid "File extension type"
+msgstr "Тип разширение на файла"
+
+msgid "Import settings"
+msgstr "Настройки на импортиране"
+
+msgid "Delimiter"
+msgstr "Разделител"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Failed to import data from the uploaded file"
+msgstr "Неуспешно импортиране на данни от качения файл"
+
+msgid "Failed to upload selected file"
+msgstr "Неуспешно качване на избрания файл"
+
+msgid "Activate License"
+msgstr "Активирай Лиценз"
+
+msgid "Renew License"
+msgstr "Подновяване на Лиценз"
+
+msgid "Slider by Supsystic"
+msgstr "Slider by Supsystic"
+
+msgid ""
+"Congratulations! You have successfully installed and activated PRO version "
+"of ' ~ environment.getMenu().getMenuTitle() ~ ' plugin."
+msgstr ""
+"Поздравления! Вие успешно инсталирахте и активирахте PRO версията на ' ~ "
+"environment.getMenu().getMenuTitle() ~ ' плъгин."
+
+msgid "Your premium support is expired in ' ~ days ~ ' days"
+msgstr "Платената поддръжка ще изтече след ' ~ days ~ ' дена"
+
+msgid "You will not be able to update your pro version with expired license"
+msgstr "Вие няма да можете да обновите своята PRO версия с изтекъл лиценз"
+
+msgid "Activate"
+msgstr "Активирай"
+
+msgid "Save as"
+msgstr "Запази като"
+
+msgid "Diagrams"
+msgstr "Диаграми"
+
+msgid "Get PRO"
+msgstr "Вземи PRO"
+
+msgid "Name"
+msgstr "Име"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Topic"
+msgstr "Тема"
+
+msgid "Plugin options"
+msgstr "Опции на плъгина"
+
+msgid "Report a bug"
+msgstr "Докладване за бъг"
+
+msgid "Require a new functionallity"
+msgstr "Изискване на нова функционалност"
+
+msgid "Other"
+msgstr "Други"
+
+msgid "Message"
+msgstr "Съобщение"
+
+msgid "Hello Supsystic Team!"
+msgstr "Hello Supsystic Team!"
+
+msgid "Can't decode table rows from JSON."
+msgstr "Не могат да се декодират табличните редове от JSON."
+
+msgid "Can't decode table meta from JSON."
+msgstr "Не могат да се декодират табличните данни от JSON."
+
+msgid "Failed to save table meta data: %s"
+msgstr "Не може да се запазят метаданните на таблицата: %s"
+
+msgid "The table with ID %d not exists."
+msgstr "Таблица %d не съществува."
+
+msgid "Add table"
+msgstr "Добави таблица"
+
+msgid "Title"
+msgstr "Заглавие"
+
+msgid "Created"
+msgstr "Създаден"
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Edit table \"%s\""
+msgstr "Редактирай таблица \"%s\""
+
+msgid "Table title"
+msgstr "Заглавие на таблицата"
+
+msgid "Columns"
+msgstr "Колони"
+
+msgid "Rows"
+msgstr "Редове"
+
+msgid "Click to rename the table and hit [Enter]"
+msgstr "Кликнете, за да преименувате таблицата и натиснете [Enter]"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Editor"
+msgstr "Редактор"
+
+msgid "Preview"
+msgstr "Преглед"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "Save"
+msgstr "Запази"
+
+msgid "Delete"
+msgstr "Изтрий"
+
+msgid "Clone"
+msgstr "Дубликат"
+
+msgid "Export available only in PRO version."
+msgstr "Експорта е достъпен само в PRO версията."
+
+msgid "Import available only in PRO version."
+msgstr "Импорта е достъпен само в PRO версията."
+
+msgid "Import"
+msgstr "Импорт"
+
+msgid "Loading your table, please wait..."
+msgstr "Зареждане на таблицата, моля изчакайте ..."
+
+msgid "Bold"
+msgstr "Одебелен"
+
+msgid "Italic"
+msgstr "Италик"
+
+msgid "Text color"
+msgstr "Цвят на текста"
+
+msgid "Background color"
+msgstr "Цвят на фона"
+
+msgid "Alignment"
+msgstr "Подравняване"
+
+msgid "Vertical alignment"
+msgstr "Вертикално подравняване"
+
+msgid "Word wrapping"
+msgstr "Форматиране на думите"
+
+msgid "Create a link"
+msgstr "Създай линк"
+
+msgid "Insert picture"
+msgstr "Вмъкни изображение"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Table elements"
+msgstr "Таблични елементи"
+
+msgid "Caption"
+msgstr "Надпис"
+
+msgid "Header"
+msgstr "Header"
+
+msgid "Footer"
+msgstr "Footer"
+
+msgid "Auto index"
+msgstr "Auto индекс"
+
+msgid "Language"
+msgstr "Език"
+
+msgid "Select language"
+msgstr "Избери език"
+
+msgid "Overwrite table text"
+msgstr "Презаписване текст в таблицата"
+
+msgid "Features"
+msgstr "Характеристика"
+
+msgid "Auto width"
+msgstr "Auto широчина"
+
+msgid "Sorting"
+msgstr "Сортиране"
+
+msgid "Sorting Order"
+msgstr "Ред на Сортиране"
+
+msgid "Ascending"
+msgstr "Възходящ"
+
+msgid "Descending"
+msgstr "Низходящ"
+
+msgid "Sorting Column"
+msgstr "Колона на Сортиране"
+
+msgid "Number of column to apply sort order."
+msgstr "Брой на колоните, на които се прилага сортиране."
+
+msgid "Pagination"
+msgstr "Номериране на страници"
+
+msgid "Pagination menu length"
+msgstr "Дължина на менюто на страниците"
+
+msgid "Searching"
+msgstr "Търсене"
+
+msgid "Info"
+msgstr "Инфо"
+
+msgid "Table information display field. %s"
+msgstr "Поле за информация относно таблицата. %s"
+
+msgid "Disallow Indexing"
+msgstr "Забрана за индексиране"
+
+msgid "Disable indexing table for search bots"
+msgstr "Изключване на индексирането на таблицата за търсещите ботове."
+
+msgid "PRO option"
+msgstr "PRO опция"
+
+msgid "Styling"
+msgstr "Стил"
+
+msgid "Borders"
+msgstr "Рамки"
+
+msgid ""
+"Cell - adds border around all four sides of each cell, Row – adds border "
+"only over and under each row. (i.e. only for the rows)."
+msgstr ""
+"Клетка - поставя рамка от четирите страни на всяка клетка, Ред - добавя "
+"рамка под и над реда (i.e. само за редове)."
+
+msgid "Cell"
+msgstr "Клетка"
+
+msgid "Row"
+msgstr "Ред"
+
+msgid "Compact"
+msgstr "Компактна"
+
+msgid "Reduce the amount of white-space."
+msgstr "Намаляване на размера на празното пространство."
+
+msgid "Highlighting"
+msgstr "Отбелязване"
+
+msgid "Row highlighting on mouse over."
+msgstr "Подчертаване на реда при поставяне на мишката върху него."
+
+msgid "Disable wrapping"
+msgstr "Деактивиране на форматиране"
+
+msgid ""
+"Disable wrapping of content in the table, so all text in the cells is on a "
+"single line."
+msgstr ""
+"Деактивиране групирането на съдържание в таблицата, така че целия текст в "
+"клетките да е на един ред."
+
+msgid "Highlight the order column"
+msgstr "Маркирайте сортирането на колоната"
+
+msgid "Row striping"
+msgstr "Поставяне на ивици на реда"
+
+msgid ""
+"Note that the table may look a little different depending on your theme "
+"style."
+msgstr ""
+"Имайте предвид, че таблицата може да бъде леко различна според стила, който "
+"има темата."
+
+msgid "Get PRO version"
+msgstr "Вземи PRO версия"
+
+msgid "Choose file to import:"
+msgstr "Избери файл за импортиране:"
+
+msgid "All tables"
+msgstr "Всички таблици"
+
+msgid "Ordering"
+msgstr "Сортиране"
+
+msgid "Table information display field."
+msgstr "Поле за информация относно таблицата."
+
+msgid ""
+"Cell - adds border around all four sides of each cell, Row â adds border "
+"only over and under each row. (i.e. only for the rows)."
+msgstr ""
+"Клетка - поставя рамка от четирите страни на всяка клетка, Ред - добавя "
+"рамка под и над реда (i.e. само за редове)."
+
+msgid ""
+"Note that the table may be minor changes to the style that has your theme."
+msgstr ""
+"Имайте предвид, че таблицата може да бъде леко различна според стила, който "
+"има темата."
