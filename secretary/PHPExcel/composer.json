@@ -1,0 +1,12 @@
+{
+    "name": "oleg/php-excel",
+    "require": {
+        "phpoffice/phpexcel": "1.8.1"
+    },
+    "authors": [
+        {
+            "name": "oleh1",
+            "email": "lyboleg@gmail.com"
+        }
+    ]
+}

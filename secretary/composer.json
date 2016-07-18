@@ -1,5 +1,12 @@
 {
+    "name": "oleg/secretary",
     "require": {
-        "phpoffice/phpword": "^0.12.1"
-    }
+        "phpoffice/phpexcel": "1.8.1"
+    },
+    "authors": [
+        {
+            "name": "oleh1",
+            "email": "lyboleg@gmail.com"
+        }
+    ]
 }
