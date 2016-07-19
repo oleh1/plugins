@@ -16,6 +16,9 @@ add_action('admin_menu', function() {
 
 function work_here()
 {
+  require_once(__DIR__ . '/PHPExcel/vendor/autoload.php');
+  require_once(__DIR__ . '/vendor/autoload.php');
+
 
   /* start create_table */
   function create_table($name)
@@ -149,10 +152,32 @@ function work_here()
   /* end create_table */
 
 
-  /* start create_PhpWord */
-  function create_PhpWord()
+  /* start get_table */
+  function get_table($name)
   {
-    require_once(__DIR__ . '/vendor/autoload.php');
+    global $wpdb;
+    $table_name = $wpdb->prefix . $name;
+    $data_table = $wpdb->get_results("SELECT * FROM {$table_name}");
+
+    var_dump($data_table);
+  }
+
+  echo "
+  <form method='POST'>
+    <input type='text' name='get_table'>
+    <input type='submit' value='Получить данные таблицы'>
+  </form>
+";
+  if ($_POST['get_table']) {
+    get_table($_POST['get_table']);
+  }
+  /* end get_table */
+
+
+  /* start create_PhpWord */
+  function create_PhpWord($name)
+  {
+//    require_once(__DIR__ . '/vendor/autoload.php');
     $phpWord = new \PhpOffice\PhpWord\PhpWord();
     $phpWord->setDefaultFontName('Times New Roman');
     $phpWord->setDefaultFontSize(14);
@@ -175,37 +200,23 @@ function work_here()
     $text = "text";
     $section->addText(htmlspecialchars($text), array(), array());
     $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-    $objWriter->save('document.docx');
-  }
-  /* end create_PhpWord */
-
-
-  /* start get_table */
-  function get_table($name)
-  {
-    global $wpdb;
-
-    $table_name = $wpdb->prefix . $name;
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    $data_table = $wpdb->get_results("SELECT * FROM {$table_name}");
-    var_dump( $data_table );
+    $objWriter->save($name . '.docx');
   }
 
   echo "
   <form method='POST'>
-    <input type='text' name='get_table'>
-    <input type='submit' value='Получить данные таблицы'>
+    <input type='text' name='create_PhpWord'>
+    <input type='submit' value='Создать файл Word'>
   </form>
 ";
-  if ($_POST['get_table']) {
-    get_table($_POST['get_table']);
+  if ($_POST['create_PhpWord']) {
+    create_PhpWord($_POST['create_PhpWord']);
   }
-  /* end get_table */
+  /* end create_PhpWord */
 
 
   /* start create_PhpExcel */
-  function create_PhpExcel()
+  function create_PhpExcel($name)
   {
     require_once(__DIR__ . '/PHPExcel/vendor/autoload.php');
 
@@ -220,13 +231,148 @@ function work_here()
     $active_sheet->getColumnDimension('E')->setWidth(18);
     $active_sheet->getColumnDimension('F')->setWidth(27);
 
-    header("Content-Type:application/vnd.ms-excel");
-    header("Content-Disposition:attachment;filename='simple.xls'");
-    $objWrite = PHPExcel_IOFactory::createWriter($phpExcel, 'Excel2007');
-    $objWrite->save('php://output');
+    $active_sheet->setCellValue('A1', 'adafsafaf');
+
+    $objWriter = PHPExcel_IOFactory::createWriter($phpExcel, 'Excel2007');
+    $objWriter->save($name . '.xlsx');
   }
-  create_PhpExcel();
+
+  echo "
+  <form method='POST'>
+    <input type='text' name='create_PhpExcel'>
+    <input type='submit' value='Создать файл Excel'>
+  </form>
+";
+  if ($_POST['create_PhpExcel']) {
+    create_PhpExcel($_POST['create_PhpExcel']);
+  }
   /* end create_PhpExcel */
-e
+
+
+  /* start create_data_PhpExcel */
+  function create_data_PhpExcel($name_PhpExcel, $table_name)
+  {
+    global $wpdb;
+    $table_name = $wpdb->prefix . $table_name;
+    $data_table = $wpdb->get_results("SELECT * FROM {$table_name}");
+
+
+
+
+
+    $phpExcel = new PHPExcel();
+    $phpExcel->setActiveSheetIndex(0);
+    $active_sheet = $phpExcel->getActiveSheet();
+
+    $active_sheet->getColumnDimension('A')->setWidth(7);
+    $active_sheet->getColumnDimension('B')->setWidth(15);
+    $active_sheet->getColumnDimension('C')->setWidth(15);
+    $active_sheet->getColumnDimension('D')->setWidth(18);
+    $active_sheet->getColumnDimension('E')->setWidth(18);
+    $active_sheet->getColumnDimension('F')->setWidth(27);
+
+    $row_start = 1;
+    $i = 0;
+    foreach ( $data_table as $item ) {
+      $row_next = $row_start + $i;
+
+      $active_sheet->setCellValue('A' . $row_next, $item->id);
+      $active_sheet->setCellValue('B' . $row_next, $item->firstname);
+      $active_sheet->setCellValue('C' . $row_next, $item->lastname);
+      $active_sheet->setCellValue('D' . $row_next, $item->birthdate);
+      $active_sheet->setCellValue('E' . $row_next, $item->date_hired);
+      $active_sheet->setCellValue('F' . $row_next, $item->position);
+
+      $i++;
+    }
+
+    $objWriter = PHPExcel_IOFactory::createWriter($phpExcel, 'Excel2007');
+    $objWriter->save($name_PhpExcel . '.xlsx');
+  }
+
+  echo "
+  <form method='POST'>
+    <input type='text' name='name_PhpExcel'>Имя
+    <input type='text' name='table_name'>Таблица базы данных
+    <input type='submit' value='Создать файл Excel и записать'>
+  </form>
+";
+  if ($_POST['name_PhpExcel'] && $_POST['table_name']) {
+    create_data_PhpExcel($_POST['name_PhpExcel'], $_POST['table_name']);
+  }
+  /* end create_data_PhpExcel */
+
+
+
+
+
+
+
+
+
+
+
+  function getCellValue($cellOrCol, $row = null, $format = 'd.m.Y')
+  {
+    //column set by index
+    //столбец устанавливается по индексу
+    if (is_numeric($cellOrCol)) {
+      //is_numeric — Проверяет, является ли переменная числом или строкой, содержащей число
+      $cell = $this->activeSheet->getCellByColumnAndRow($cellOrCol, $row);
+      // получаем доступ к ячейке по номеру строки(нумерация с единицы) и столбца(нумерация с нуля)
+    } else {
+      $lastChar = substr($cellOrCol, -1, 1);
+      //substr — Возвращает подстроку
+      if (!is_numeric($lastChar)) { //column contains only letter, e.g. "A"
+                                    //столбец содержит только букву, например, "А"
+        $cellOrCol .= $row;
+      }
+
+      $cell = $this->activeSheet->getCell($cellOrCol);
+    }
+
+    //try to find current coordinate in all merged cells ranges
+    //попытаться найти текущие координаты во всех объединенных ячеек диапазонов
+    //if find -> get value from head cell
+    //если найти -> значение приобретают из головки ячейки
+    foreach ($this->mergedCellsRange as $currMergedRange) {
+      if ($cell->isInRange($currMergedRange)) {
+        //Проверяем , если ячейки объединены
+        $currMergedCellsArray = PHPExcel_Cell::splitRange($currMergedRange);
+        //Сплит диапазон в координате строки
+        //вернуться : Array две координатные с указанной строки
+        $cell = $this->activeSheet->getCell($currMergedCellsArray[0][0]);
+        //извлечь из рабочего листа
+        break;
+      }
+    }
+
+    //simple value
+    //простое значение
+    $val = $cell->getValue();
+    //получить значение ячейки
+
+    //date
+    //дата
+    if (PHPExcel_Shared_Date::isDateTime($cell)) {
+      //Является ли данная ячейка дата / время ?
+      $val = date($format, PHPExcel_Shared_Date::ExcelToPHP($val));
+      //Преобразование даты из Excel в PHP
+    }
+
+    //for incorrect formulas take old value
+    //для неверных формулы принимают старое значение
+    if ((substr($val, 0, 1) === '=') && (strlen($val) > 1)) {
+      //strlen -- Возвращает длину строки
+      $val = $cell->getOldCalculatedValue();
+      //возвращает уже посчитанную формулу или еще чего то(извлекает последнее значение , рассчитанное для ячейки)
+      /* используется для очень конкретных обстоятельств , и не гарантируется правильным даже тогда , потому что он извлекает последнее
+       значение , рассчитанное для ячейки в самой MS EXCEL , которая , ай не может быть правильным, если внешняя рабочая книга не была
+       доступна для MS Excel в то обстоятельство , или MS Excel оценки формула была отключить */
+    }
+
+    return $val;
+  }
+
 }
 ?>
