@@ -218,7 +218,7 @@ function work_here()
   /* start create_PhpExcel */
   function create_PhpExcel($name)
   {
-    require_once(__DIR__ . '/PHPExcel/vendor/autoload.php');
+//    require_once(__DIR__ . '/PHPExcel/vendor/autoload.php');
 
     $phpExcel = new PHPExcel();
     $phpExcel->setActiveSheetIndex(0);
@@ -303,6 +303,140 @@ function work_here()
   /* end create_data_PhpExcel */
 
 
+  /**
+  * start from_PhpExcel_to_database
+   **/
+  /* start unloading_data_PhpExcel */
+  function unloading_data_PhpExcel() {
+    $file = __DIR__ . '/b1.xlsx';
+    $xls = PHPExcel_IOFactory::load($file);
+    $xls->setActiveSheetIndex(0);
+    $sheet = $xls->getActiveSheet();
+    $rowIterator = $sheet->getRowIterator();
+
+    $arr = array();
+    foreach($rowIterator as $row) {
+      if($row->getRowIndex() != 1){
+        $cellIterator = $row->getCellIterator();
+        foreach ($cellIterator as $cell){
+          $cellPath = $cell ->getColumn();
+
+          $cells = array(
+            'B'=>'customer',
+            'D'=>'order',
+            'F'=>'date port',
+            'G'=>'country',
+            'J'=>'products',
+            'K'=>'grade',
+            'U'=>'date',
+            'M'=>'size',
+            'P'=>'length',
+            'Q'=>'quantity',
+            'U'=>'date',
+            'V'=>'gruzo',
+
+          );
+
+          if(isset($cells[$cellPath])){
+
+
+
+            if($cellPath == 'U') {
+              if($cell->getCalculatedValue() == '00.00.0000' || $cell->getCalculatedValue() == '') {
+                $t = '0000-00-00';
+              }
+              else {
+                $t = date('Y-m-d',\PHPExcel_Shared_Date::ExcelToPHP($cell->getCalculatedValue()));
+              }
+
+              $arr[$row->getRowIndex()][$cells[$cellPath]] =$t;
+              continue;
+            }
+
+            if($cellPath == 'F') {
+              if($cell->getCalculatedValue() == '00.00.0000' || $cell->getCalculatedValue() == '') {
+                $t = '0000-00-00';
+              }
+              else {
+                $t = date('Y-m-d',\PHPExcel_Shared_Date::ExcelToPHP($cell->getCalculatedValue()));
+              }
+
+              $arr[$row->getRowIndex()][$cells[$cellPath]] =$t;
+              continue;
+            }
+
+
+            $arr[$row->getRowIndex()][$cells[$cellPath]] = $cell->getCalculatedValue();
+          }
+        }
+      }
+    }
+    return $arr;
+  }
+  /* end unloading_data_PhpExcel */
+
+
+  /* start loading_data_PhpExcel_to_database */
+  function loading_data_PhpExcel_to_database($arr) {
+    $query = "";
+    $query_columns = "";
+    $place_holders = array();
+    $values = array();
+    $query .= "INSERT INTO `wp_main` (";
+
+    foreach($arr as $count => $row_array)
+    {
+      foreach($row_array as $key => $value) {
+        if($count == 2) {
+          if($query_columns) {
+            $query_columns .= ",`".$key."`";
+          } else {
+            $query_columns .= "`".$key."`";
+          }
+        }
+
+        $values[] =  $value;
+
+        if(is_numeric($value)) {
+          if(isset($place_holders[$count])) {
+            $place_holders[$count] .= ", '%f'";
+          } else {
+            $place_holders[$count] .= "( '%f'";
+          }
+        } else {
+          if(isset($place_holders[$count])) {
+            $place_holders[$count] .= ", '%s'";
+          } else {
+            $place_holders[$count] .= "( '%s'";
+          }
+        }
+      }
+      $place_holders[$count] .= ")";
+    }
+    $query .= " $query_columns ) VALUES ";
+    $query .= implode(', ', $place_holders);
+    global $wpdb;
+    $result_prepare = $wpdb->prepare($query, $values);
+    $wpdb->query( $result_prepare );
+  }
+  echo "
+  <form method='POST'>
+    <input type='submit' name='from_PhpExcel_to_database' value='Выгрузить данные с Excel в базу'>
+  </form>
+  ";
+  if ($_POST['from_PhpExcel_to_database']) {
+    loading_data_PhpExcel_to_database( unloading_data_PhpExcel() );
+  }
+  /* end loading_data_PhpExcel_to_database */
+  /**
+   * end from_PhpExcel_to_database
+   **/
+
+
+
+
+
+  
 
 
 
@@ -312,6 +446,7 @@ function work_here()
 
 
 
+//черновиккккккк
   function getCellValue($cellOrCol, $row = null, $format = 'd.m.Y')
   {
     //column set by index
@@ -373,6 +508,10 @@ function work_here()
 
     return $val;
   }
+//черновиккккккк
+
+
+
 
 }
 ?>
