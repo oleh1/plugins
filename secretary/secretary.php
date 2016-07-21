@@ -177,7 +177,6 @@ function work_here()
   /* start create_PhpWord */
   function create_PhpWord($name)
   {
-//    require_once(__DIR__ . '/vendor/autoload.php');
     $phpWord = new \PhpOffice\PhpWord\PhpWord();
     $phpWord->setDefaultFontName('Times New Roman');
     $phpWord->setDefaultFontSize(14);
@@ -218,8 +217,6 @@ function work_here()
   /* start create_PhpExcel */
   function create_PhpExcel($name)
   {
-//    require_once(__DIR__ . '/PHPExcel/vendor/autoload.php');
-
     $phpExcel = new PHPExcel();
     $phpExcel->setActiveSheetIndex(0);
     $active_sheet = $phpExcel->getActiveSheet();
@@ -255,10 +252,6 @@ function work_here()
     global $wpdb;
     $table_name = $wpdb->prefix . $table_name;
     $data_table = $wpdb->get_results("SELECT * FROM {$table_name}");
-
-
-
-
 
     $phpExcel = new PHPExcel();
     $phpExcel->setActiveSheetIndex(0);
@@ -304,7 +297,7 @@ function work_here()
 
 
   /**
-  * start from_PhpExcel_to_database
+   * start from_PhpExcel_to_database
    **/
   /* start unloading_data_PhpExcel */
   function unloading_data_PhpExcel() {
@@ -398,6 +391,7 @@ function work_here()
         $values[] =  $value;
 
         if(is_numeric($value)) {
+          //is_numeric — Проверяет, является ли переменная числом или строкой, содержащей число
           if(isset($place_holders[$count])) {
             $place_holders[$count] .= ", '%f'";
           } else {
@@ -415,6 +409,7 @@ function work_here()
     }
     $query .= " $query_columns ) VALUES ";
     $query .= implode(', ', $place_holders);
+    //implode -- Объединяет элементы массива в строку
     global $wpdb;
     $result_prepare = $wpdb->prepare($query, $values);
     $wpdb->query( $result_prepare );
@@ -432,6 +427,28 @@ function work_here()
    * end from_PhpExcel_to_database
    **/
 
+
+  /* start PhpWord_template */
+  function PhpWord_template() {
+
+//    $a = \PhpOffice\PhpWord\IOFactory::createReader('Word2007');
+//    $z = __DIR__ . '/oleggg1.docx';
+//    $b = $a->load($z);
+
+//    $zip = __DIR__ . '/oleg2.docx.zip';
+//    $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($zip);
+//    $templateProcessor->setValue('Name1', 'oleg1');
+//    $templateProcessor->setValue('Name2', 'oleg2');
+//    $templateProcessor->saveAs( __DIR__ . '/oleg2');
+
+
+
+    $phpWord = new \PhpOffice\PhpWord\PhpWord();
+    $a = $phpWord->loadTemplate( __DIR__ . '/oleg2.docx.zip' );
+    $a->saveAs(__DIR__ . '/oleg1.docx');
+  }
+  PhpWord_template();
+  /* end PhpWord_template */
 
 
 
