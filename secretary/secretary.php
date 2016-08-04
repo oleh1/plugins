@@ -16,8 +16,8 @@ add_action('admin_menu', function() {
 
 function work_here()
 {
-  require_once(__DIR__ . '/PHPExcel/vendor/autoload.php');
-  require_once(__DIR__ . '/vendor/autoload.php');
+  require_once(__DIR__ . '/phpExcel/vendor/autoload.php');
+  require_once(__DIR__ . '/phpWord/vendor/autoload.php');
 
 
   /* start create_table */
@@ -196,10 +196,10 @@ function work_here()
     $sectionStyle = array();
     $section = $phpWord->addSection($sectionStyle);
 
-    $text = "text";
+    $text = '${name}';
     $section->addText(htmlspecialchars($text), array(), array());
     $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-    $objWriter->save($name . '.docx');
+    $objWriter->save( __DIR__ . '/' . $name . '.docx' );
   }
 
   echo "
@@ -231,7 +231,7 @@ function work_here()
     $active_sheet->setCellValue('A1', 'adafsafaf');
 
     $objWriter = PHPExcel_IOFactory::createWriter($phpExcel, 'Excel2007');
-    $objWriter->save($name . '.xlsx');
+    $objWriter->save( __DIR__ . '/' . $name . '.xlsx');
   }
 
   echo "
@@ -280,7 +280,7 @@ function work_here()
     }
 
     $objWriter = PHPExcel_IOFactory::createWriter($phpExcel, 'Excel2007');
-    $objWriter->save($name_PhpExcel . '.xlsx');
+    $objWriter->save( __DIR__ . '/' . $name_PhpExcel . '.xlsx' );
   }
 
   echo "
@@ -414,6 +414,7 @@ function work_here()
     $result_prepare = $wpdb->prepare($query, $values);
     $wpdb->query( $result_prepare );
   }
+
   echo "
   <form method='POST'>
     <input type='submit' name='from_PhpExcel_to_database' value='Выгрузить данные с Excel в базу'>
@@ -427,33 +428,35 @@ function work_here()
    * end from_PhpExcel_to_database
    **/
 
-
+  
   /* start PhpWord_template */
   function PhpWord_template() {
-
-//    $a = \PhpOffice\PhpWord\IOFactory::createReader('Word2007');
-//    $z = __DIR__ . '/oleggg1.docx';
-//    $b = $a->load($z);
-
-//    $zip = __DIR__ . '/oleg2.docx.zip';
-//    $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($zip);
-//    $templateProcessor->setValue('Name1', 'oleg1');
-//    $templateProcessor->setValue('Name2', 'oleg2');
-//    $templateProcessor->saveAs( __DIR__ . '/oleg2');
-
-
-
-    $phpWord = new \PhpOffice\PhpWord\PhpWord();
-    $a = $phpWord->loadTemplate( __DIR__ . '/oleg2.docx.zip' );
-    $a->saveAs(__DIR__ . '/oleg1.docx');
+    $zip = __DIR__ . '/name.docx';
+//    $templateProcessor = (new \PhpOffice\PhpWord\PhpWord())->loadTemplate($zip);
+    $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($zip);
+    $templateProcessor->setValue('name', 'Oleh');
+    $templateProcessor->setValue('surname', 'Kopytsia');
+    $templateProcessor->setValue('age', '24');
+    $templateProcessor->saveAs( __DIR__ . '/modified.docx');
   }
-  PhpWord_template();
+
+  echo "
+  <form method='POST'>
+    <input type='submit' name='PhpWord_template' value='Отработать шаблон phpWord'>
+  </form>
+  ";
+  if ($_POST['PhpWord_template']) {
+    PhpWord_template();
+  }
   /* end PhpWord_template */
 
 
 
 
   
+
+
+
 
 
 
